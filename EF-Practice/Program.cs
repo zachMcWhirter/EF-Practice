@@ -32,5 +32,21 @@ using var db = new EfpracticedbContext();
 //    Console.WriteLine();
 //}
 
+// GETTING A FILTERED LIST
+
 var procs = new EfpracticedbContextProcedures(db);
+    // create a variable to store the procedures to be used
+
+var result = await procs.GetFriendsAsync("%r%");
+    // Using the stored proc to filter results and return only
+    // the firstNames that contain the string pessed into the method
+
+foreach (var item in result)
+    // everytime a firstName has chars that match the parameter string...
+{
+    Console.WriteLine(item.FriendName);
+    // ...Write them to the console
+}
+
+
 
