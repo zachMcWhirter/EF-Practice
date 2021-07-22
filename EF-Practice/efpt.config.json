@@ -24,6 +24,10 @@
       {
          "Name": "[dbo].[friends]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GetFriends]",
+         "ObjectType": 1
       }
    ],
    "UiHint": "(localdb)\\MSSQLLocalDB.EFPracticeDB",
